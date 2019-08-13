@@ -37,6 +37,9 @@ function buildArgs (source, givenOutput, loop, initialVolume, showOsd) {
 
 	let args = [source, '-o', output, osd ? '' : '--no-osd'];
 
+	args.push('--win', '0,600,1080,1208');
+	args.push('--aspect-mode', 'Letterbox');
+
 	// Handle the loop argument, if provided
 	if (loop) {
 		args.push('--loop');
